@@ -1,0 +1,35 @@
+#!/usr/bin/ruby
+
+#Author: Vatsaev Aslan (@avatsaev)
+#Repository: https://github.com/avatsaev/mackeeper_blocker
+
+#request root previleges in order to modify hosts file
+if ENV["USER"] != "root"
+  exec("sudo #{ENV['_']} #{ARGV.join(' ')}")
+end
+
+#initiate domain list array
+mk_address_list = [
+  "mackeeperapp.mackeeper.com",
+  "mackeeperapp2.mackeeper.com",
+  "mackeeperapp3.mackeeper.com",
+  "mackeeper.com"
+]
+
+
+#for every domain name
+mk_address_list.each do |addr|
+  p "Adding #{addr} to hosts file..."
+
+  #append it to hosts file
+  open('/etc/hosts', 'a') do |f|
+    f.puts "127.0.0.1 #{addr}"
+  end
+
+  p "✔︎ Done."
+end
+
+p "-----------"
+p "✔︎Script finished running."
+
+exit
