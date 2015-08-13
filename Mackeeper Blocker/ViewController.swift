@@ -18,8 +18,8 @@ class ViewController: NSViewController {
     "#GUI Repository: https://github.com/mahimahi42/mackeeper_blocker\n\n" +
     "#request root previleges in order to modify hosts file\n" +
     "if ENV[\"USER\"] != \"root\"\n" +
-    "\texec(\"sudo #{ENV['_']} #{ARGV.join(' ')}\")\n" +
-    "\texit\n" +
+    "exec(\"sudo #{ENV['_']} #{ARGV.join(' ')}\")\n" +
+    "exit\n" +
     "end\n\n" +
     "#initiate domain list array\n" +
     "mk_address_list = [\n" +
@@ -40,6 +40,7 @@ class ViewController: NSViewController {
     "p \"-----------\"\n" +
     "p \"✔︎ Script finished running.\"\n\n" +
     "exit"
+    var path:String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -53,20 +54,39 @@ class ViewController: NSViewController {
         }
     }
     
-    func createScript() {
-        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
-            let dir = dirs[0] //documents directory
-            let path = dir.stringByAppendingPathComponent(file);
+    func loadScript() {
+        let bundle = NSBundle.mainBundle()
+        path = bundle.pathForResource("mackeeper_blocker", ofType: "")
+        
+        println(path!)
             
-            //writing
-            contents.writeToFile(path, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
-            
-            println("Wrote \(path)")
-        }
+//        if let dirs : [String] = NSSearchPathForDirectoriesInDomains(NSSearchPathDirectory.DocumentDirectory, NSSearchPathDomainMask.AllDomainsMask, true) as? [String] {
+//            let dir = dirs[0] //documents directory
+//            path = dir.stringByAppendingPathComponent(file);
+//            
+//            //writing
+//            contents.writeToFile(path!, atomically: false, encoding: NSUTF8StringEncoding, error: nil);
+//            
+//            println("Wrote \(path)")
+//        }
     }
 
     @IBAction func blockMackeeper(sender: AnyObject) {
-        createScript()
+        loadScript()
+//        let task = NSTask()
+//        task.launchPath = "/bin/sh"
+//        if let pathStr = path {
+//            task.arguments = [pathStr]
+//            
+//            let pipe = NSPipe()
+//            task.standardOutput = pipe
+//            task.launch()
+//            
+//            let data = pipe.fileHandleForReading.readDataToEndOfFile()
+//            let output = NSString(data: data, encoding: NSUTF8StringEncoding)
+//            
+//            print(output)
+//        }
     }
 
 }
