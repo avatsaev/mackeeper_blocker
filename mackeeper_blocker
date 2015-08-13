@@ -6,6 +6,7 @@
 #request root previleges in order to modify hosts file
 if ENV["USER"] != "root"
   exec("sudo #{ENV['_']} #{ARGV.join(' ')}")
+  exit
 end
 
 #initiate domain list array
@@ -16,17 +17,16 @@ mk_address_list = [
   "mackeeper.com"
 ]
 
+#open hosts file in append mode
+open('/etc/hosts', 'a') do |f|
 
-#for every domain name
-mk_address_list.each do |addr|
-  p "Adding #{addr} to hosts file..."
+  #for every domain name
+  mk_address_list.each do |addr|
+    p "Adding #{addr} to hosts file..."
 
-  #append it to hosts file
-  open('/etc/hosts', 'a') do |f|
     f.puts "127.0.0.1 #{addr}"
+    p "✔︎ Done."
   end
-
-  p "✔︎ Done."
 end
 
 p "-----------"
