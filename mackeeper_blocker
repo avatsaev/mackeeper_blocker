@@ -30,6 +30,6 @@ mk_address_list.each do |addr|
 end
 
 p "-----------"
-p "✔︎Script finished running."
+p "✔︎ Script finished running."
 
 exit
