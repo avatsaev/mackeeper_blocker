@@ -13,7 +13,7 @@
 		0203E1A71B7D302400FA5316 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0203E1A51B7D302400FA5316 /* Main.storyboard */; };
 		0203E1B31B7D302400FA5316 /* Mackeeper_BlockerTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0203E1B21B7D302400FA5316 /* Mackeeper_BlockerTests.swift */; };
 		0203E1BF1B7D306800FA5316 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 0203E1BD1B7D306800FA5316 /* README.md */; };
-		0203E1C11B7D371800FA5316 /* mackeeper_blocker in Resources */ = {isa = PBXBuildFile; fileRef = 0203E1C01B7D371800FA5316 /* mackeeper_blocker */; };
+		0203E1C51B7D3D4F00FA5316 /* mackeeper_blocker.sh in Resources */ = {isa = PBXBuildFile; fileRef = 0203E1C41B7D3D4F00FA5316 /* mackeeper_blocker.sh */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -37,7 +37,7 @@
 		0203E1B11B7D302400FA5316 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		0203E1B21B7D302400FA5316 /* Mackeeper_BlockerTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mackeeper_BlockerTests.swift; sourceTree = "<group>"; };
 		0203E1BD1B7D306800FA5316 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
-		0203E1C01B7D371800FA5316 /* mackeeper_blocker */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.ruby; name = mackeeper_blocker; path = "Mackeeper Blocker/mackeeper_blocker"; sourceTree = "<group>"; };
+		0203E1C41B7D3D4F00FA5316 /* mackeeper_blocker.sh */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.script.sh; path = mackeeper_blocker.sh; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -61,7 +61,7 @@
 		0203E1911B7D302400FA5316 = {
 			isa = PBXGroup;
 			children = (
-				0203E1C01B7D371800FA5316 /* mackeeper_blocker */,
+				0203E1C41B7D3D4F00FA5316 /* mackeeper_blocker.sh */,
 				0203E1BD1B7D306800FA5316 /* README.md */,
 				0203E19C1B7D302400FA5316 /* Mackeeper Blocker */,
 				0203E1AF1B7D302400FA5316 /* Mackeeper BlockerTests */,
@@ -195,9 +195,9 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				0203E1C11B7D371800FA5316 /* mackeeper_blocker in Resources */,
 				0203E1A41B7D302400FA5316 /* Images.xcassets in Resources */,
 				0203E1A71B7D302400FA5316 /* Main.storyboard in Resources */,
+				0203E1C51B7D3D4F00FA5316 /* mackeeper_blocker.sh in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
