@@ -52,15 +52,21 @@ class ViewController: NSViewController {
     @IBAction func blockMackeeper(sender: AnyObject) {
         path = loadScript()
         
+        // Unwrap our path. It should always been found.
         if let pathStr = path {
+            // Spawn a new NSTask to execute our script. Commands of the form:
+            //   /usr/bin/open -a Terminal.app script_name
+            // will spawn a new Terminal and execute the script.
             let task = NSTask()
             task.launchPath = "/usr/bin/open"
             task.arguments = ["-a", "Terminal.app", pathStr]
             
+            // Most users won't see the output, but it's caught here...
             let pipe = NSPipe()
             task.standardOutput = pipe
             task.launch()
             
+            // ...and output here. This is mostly for debugging.
             let data = pipe.fileHandleForReading.readDataToEndOfFile()
             let output = NSString(data: data, encoding: NSUTF8StringEncoding)
             
