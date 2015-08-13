@@ -10,6 +10,8 @@ import Cocoa
 
 class ViewController: NSViewController {
 
+    let file = ""
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -21,7 +23,11 @@ class ViewController: NSViewController {
         // Update the view, if already loaded.
         }
     }
+    
+    
 
+    @IBAction func blockMackeeper(sender: AnyObject) {
+    }
 
 }
 
