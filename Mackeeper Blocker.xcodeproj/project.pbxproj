@@ -159,6 +159,7 @@
 		0203E1921B7D302400FA5316 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
+				LastSwiftUpdateCheck = 0700;
 				LastUpgradeCheck = 0640;
 				ORGANIZATIONNAME = "Bryce Davis";
 				TargetAttributes = {
@@ -408,6 +409,7 @@
 				0203E1B81B7D302400FA5316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		0203E1B91B7D302400FA5316 /* Build configuration list for PBXNativeTarget "Mackeeper BlockerTests" */ = {
 			isa = XCConfigurationList;
@@ -416,6 +418,7 @@
 				0203E1BB1B7D302400FA5316 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
