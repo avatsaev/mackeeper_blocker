@@ -4,7 +4,7 @@
 #Repository: https://github.com/avatsaev/mackeeper_blocker
 
 #request root previleges in order to modify hosts file
-if ENV["USER"] != "root"
+if Process.euid != 0
   exec("sudo #{ENV['_']} #{ARGV.join(' ')}")
   exit
 end
