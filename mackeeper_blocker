@@ -27,6 +27,9 @@ open('/etc/hosts', 'a') do |f|
     f.puts "127.0.0.1 #{addr}"
     p "✔︎ Done."
   end
+  
+  f.close
+  
 end
 
 p "-----------"
