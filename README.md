@@ -8,3 +8,5 @@ Simply execute mackeeper_blocker in the terminal.app and it'll add the domain na
 ```
 ./mackeeper_blocker
 ```
+
+Full tutorial can be found here: https://medium.com/@avatsaev/do-this-on-your-parents-mac-if-you-dan-t-want-them-to-make-you-deal-with-mackeeper-651f5343355f
