@@ -11,9 +11,6 @@ end
 
 #initiate domain list array
 mk_address_list = [
-  "mackeeperapp.mackeeper.com",
-  "mackeeperapp2.mackeeper.com",
-  "mackeeperapp3.mackeeper.com",
   "mackeeper.com"
 ]
 
