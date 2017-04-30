@@ -11,10 +11,14 @@ end
 
 #initiate domain list array
 mk_address_list = [
+  "cf.mackeeper.com",
+  "download.mackeeper.com",
   "mackeeperapp.mackeeper.com",
   "mackeeperapp2.mackeeper.com",
   "mackeeperapp3.mackeeper.com",
   "mackeeper.com",
+  "static.mackeeper.com",
+  "static-site.mackeeper.com",
   "trustedmaccleaner.com"
 ]
 
