@@ -19,7 +19,8 @@ mk_address_list = [
   "mackeeper.com",
   "static.mackeeper.com",
   "static-site.mackeeper.com",
-  "trustedmaccleaner.com"
+  "trustedmaccleaner.com",
+  "letmacworkfaster.life"
 ]
 
 #open hosts file in append mode
